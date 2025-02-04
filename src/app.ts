@@ -31,7 +31,7 @@ const limiter = rateLimit({
 
 app.use(cache('5 minutes'));
 app.use(cors()); //enable all CORS request
-app.use(limiter); //limit to all API
+// app.use(limiter); //limit to all API
 app.use((req: express.Request, _res: Response, next: NextFunction) => {
   console.log('Requested URL:', req.originalUrl);
   next();
